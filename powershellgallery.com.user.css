@@ -1,0 +1,190 @@
+/* ==UserStyle==
+@name           Dark PowerShell Gallery
+@namespace      https://github.com/panekj/usercss.styles/
+@version        1.0.0
+@description    Dark version of PowerShell Gallery
+@author         panekj <panekj@pm.me> (https://github.com/panekj)
+@homepageURL    https://github.com/panekj/usercss.styles/
+@supportURL     https://github.com/panekj/usercss.styles/issues
+@updateURL      https://github.com/panekj/usercss.styles/raw/master/powershellgallery.com.user.css
+@license        AGPL-3.0 (https://www.gnu.org/licenses/agpl-3.0.en.html)
+@preprocessor 	default
+@advanced text  font "Font" "'Segoe UI', "Helvetica Neue", Helvetica, Arial, sans-serif"
+@advanced color link-color "Link colour" #069cf8
+@advanced color y-axis-color "Y axis color" #fff
+@advanced color package-headerline-color "Package header line colour" #ccc
+@advanced color paragraph-color "Paragraph colour" #fff
+@advanced color dropdown-background "Dropdown background" #222
+@advanced color dropdown-color "Dropdown colour" #fff
+@advanced color code-background "Code background" #005695
+@advanced color code-color "Code colour" #fff
+@advanced text  code-font "Code font" "'FiraCode Nerd Font', 'Fira Code', 'Cascadia Code', 'andale mono', 'lucida console', monospace"
+@advanced color panel-background "Panel background" #333
+@advanced color input-background "Input background" #222
+@advanced color tag-background-color "Tag background" #333
+@advanced color tag-link-color "Tag link color" #80c9ff
+@advanced color install-background "Installation background" #333
+@advanced color install-color "Installation text color" #fff
+@advanced color script-background "Script background" #111
+@advanced color body-background "Body background" #111
+@advanced color body-color "Body colour" #fff
+@advanced color body-heading-1 "Body H1" #80c9ff
+@advanced color body-heading-2 "Body H2" #fff
+@advanced color body-heading-3 "Body H3" #a0a0a0
+@advanced color footer-background "Footer background" #333
+@advanced color footer-color "Footer colour" #fff
+@advanced color footer-link-color "Footer link colour" #ddd
+@advanced color banner-background "Banner background" #333
+@advanced color banner-color "Banner colour" #333
+@advanced color banner-link-color "Banner link colour" #069cf8
+@advanced color table-head-color "Table head colour" #fff
+@advanced text  wide-screen "Wide screen width" 2200px
+==/UserStyle== */
+
+@-moz-document domain("powershellgallery.com"), domain("www.powershellgallery.com") {
+	body {
+		font-family: var(--font);
+		font-size: 14px;
+		color: var(--body-color);
+		background-color: var(--body-background);
+	}
+	
+	h2 a, h3 a, h2 a:hover, h3 a:hover, h2 a:focus, h3 a:focus, h2 a:active, h3 a:active {
+		color: var(--body-color)
+	}
+	
+	body h1 {
+		color: var(--body-heading-1)
+	}
+	
+	body h2 {
+		color: var(--body-heading-2)
+	}
+	
+	body h3 {
+		color: var(--body-heading-3)
+	}
+	
+	a {
+		color: var(--link-color)
+	}
+	
+	p {
+		color: var(--paragraph-color)
+	}
+	
+	section.package h2::after {
+		content: ':'
+	}
+	
+	text {
+		fill: var(--y-axis-color)
+	}
+	
+	.nuget-badge code {
+		background-color: var(--code-background);
+		color: var(--code-color);
+		font-family: var(--code-font)
+	}
+	
+	.breadcrumb-title, .page-subheading p.message {
+		color: var(--body-heading-2)
+	}
+	
+	.dropdown-menu {
+		background-color: var(--dropdown-background)
+	}
+	
+	.dropdown-header, .dropdown-menu > li > a {
+		color: var(--dropdown-color)
+	}
+	
+	.panel {
+		background-color: var(--panel-background)
+	}
+	
+	.form-control[type='text'], select.form-control {
+		background-color: var(--input-background);
+		color: var(--body-heading-2)
+	}
+	
+	.package-details-main p a {
+		color: var(--link-color)
+	}
+	
+	.page-package-details .install-tabs .nav-tabs {
+		background-color: var(--body-background)
+	}
+	
+	.page-package-details .install-tabs,
+	.page-package-details .install-tabs .nav-tabs > li,
+	.page-package-details .install-tabs .nav-tabs > li.active > a {
+		background-color: var(--install-background);
+		border: none;
+		color: var(--install-color)
+	}
+	
+	.page-package-details .install-tabs .nav-tabs > li > a {
+		background-color: var(--body-background);
+		color: var(--install-color);
+		border: none
+	}
+	
+	.package-details-main .tab-pane p {
+		color: var(--install-color)
+	}
+	
+	.page-package-details .install-tabs .tab-content .tab-pane .install-script {
+		background-color: var(--script-background);
+		color: var(--install-color)
+	}
+	
+	.banner span, .banner .ms-Icon {
+		color: var(--banner-color)
+	}
+	
+	.page-home .what-is-nuget .learn p {
+		color: var(--body-color)
+	}
+	
+	.footer {
+		background: var(--footer-background);
+		color: var(--footer-color)
+	}
+	
+	.footer-heading-last {
+		color: var(--footer-color)
+	}
+	
+	.footer-container a {
+		color: var(--footer-link-color)
+	}
+	
+	.page-home .what-is-nuget .stats-table table th {
+		color: var(--table-head-color)
+	}
+	
+	.package-headerLine, section.package h2 {
+		color: var(--package-headerline-color)
+	}
+	
+	.tag {
+		background-color: var(--tag-background-color);
+		color: var(--tag-link-color)
+	}
+	
+	.banner a {
+		color: var(--banner-link-color)
+	}
+	
+	#sortOrder {
+		background-color: #222;
+	}
+	
+	/* small thing for ultrawide screens */
+	@media (min-width: 2260px) {
+		.main-container {
+			width: var(--wide-screen)
+		}
+	}
+}
