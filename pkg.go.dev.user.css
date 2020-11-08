@@ -1,0 +1,72 @@
+/* ==UserStyle==
+@name           Dark pkg.go.dev
+@namespace      https://github.com/panekj/usercss.styles/
+@version        1.0.0
+@description    Dark version of pkg.go.dev
+@author         panekj <panekj@pm.me> (https://github.com/panekj)
+@homepageURL    https://github.com/panekj/usercss.styles/
+@supportURL     https://github.com/panekj/usercss.styles/issues
+@updateURL      https://github.com/panekj/usercss.styles/raw/master/pkg.go.dev.user.css
+@license        AGPL-3.0 (https://www.gnu.org/licenses/agpl-3.0.en.html)
+==/UserStyle== */
+
+@-moz-document domain("pkg.go.dev") {
+	body,
+	.Header-searchForm
+	{
+		  background-color: #111
+	}
+
+	.Documentation code,
+	.Documentation pre,
+	.DetailsNavFixed,
+	.Documentation-exampleButtonsContainer button
+	{
+		  background-color: var(--gray-1)
+	}
+
+	.CopyToClipboardButton:hover
+	{
+		  background-color: var(--gray-2)
+	}
+
+	.DetailsHeader-badge--latest
+	{
+		  background: var(--slate)
+	}
+
+	body,
+	.Container,
+	.DetailsHeader-infoLabelTitle,
+	.DocNav [aria-selected='true'],
+	.DocNav a:hover, .DocNav a[aria-selected='true'],
+	.Documentation,
+	.DetailsNav [role='tab'][aria-selected='true'],
+	.Header-searchFormInput
+	{
+		  color: var(--gray-10)
+	}
+
+	.DocNav a,
+	.DocNav a:link,
+	.DocNav a:visited,
+	.DetailsNavFixed-version
+	{
+		  color: var(--gray-8)
+	}
+
+	.DetailsHeader-breadcrumbCurrent,
+	.Documentation-build
+	{
+		  color: var(--gray-7)
+	}
+
+	.Documentation a,
+	a,
+	a:link,
+	a:visited,
+	.Documentation-exampleDetailsHeader
+	{
+		  color: var(--turq-light)
+	}
+}
