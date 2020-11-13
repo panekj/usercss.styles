@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dark pkg.go.dev
 @namespace      https://github.com/panekj/usercss.styles/
-@version        1.0.0
+@version        1.0.1
 @description    Dark version of pkg.go.dev
 @author         panekj <panekj@pm.me> (https://github.com/panekj)
 @homepageURL    https://github.com/panekj/usercss.styles/
@@ -12,7 +12,8 @@
 
 @-moz-document domain("pkg.go.dev") {
 	body,
-	.Header-searchForm
+	.Header-searchForm,
+	.JumpDialog-input
 	{
 		  background-color: #111
 	}
@@ -20,12 +21,19 @@
 	.Documentation code,
 	.Documentation pre,
 	.DetailsNavFixed,
-	.Documentation-exampleButtonsContainer button
+	.Documentation-exampleButtonsContainer button,
+	.UnitFixedHeader,
+	.UnitOutline-jumpTo button,
+	.UnitOutline-panel,
+	.Dialog-button
 	{
 		  background-color: var(--gray-1)
 	}
 
-	.CopyToClipboardButton:hover
+	dialog,
+	.CopyToClipboardButton:hover,
+	a.UnitOutline-accordion[aria-expanded='true'],
+	.UnitOutline-jumpTo::after
 	{
 		  background-color: var(--gray-2)
 	}
@@ -50,13 +58,23 @@
 	.DocNav a,
 	.DocNav a:link,
 	.DocNav a:visited,
-	.DetailsNavFixed-version
+	.DetailsNavFixed-version,
+	.JumpDialog-input
 	{
 		  color: var(--gray-8)
 	}
 
 	.DetailsHeader-breadcrumbCurrent,
-	.Documentation-build
+	.Documentation-build,
+	.UnitHeaderFixed-detailItem,
+	.UnitHeaderFixed-detailItem a > span,
+	.UnitHeader-detailItem,
+	.UnitHeader-detailItem a > span,
+	.UnitOutline-jumpTo button,
+	dialog,
+	.UnitOutline-jumpTo::before,
+	.UnitOutline-jumpTo::after,
+	.UnitHeader-breadcrumbItem
 	{
 		  color: var(--gray-7)
 	}
@@ -65,8 +83,23 @@
 	a,
 	a:link,
 	a:visited,
-	.Documentation-exampleDetailsHeader
+	.Documentation-exampleDetailsHeader,
+	.Dialog-button
 	{
 		  color: var(--turq-light)
+	}
+	
+	.JumpDialog a:hover
+	{
+		text-decoration: underline		
+	}
+	
+	.DocNav-groupLabel::before
+	{
+		border-left: 0.25rem solid var(--gray-7)
+	}
+	
+	.Documentation pre .comment {
+		color: #00c000
 	}
 }
