@@ -1,0 +1,95 @@
+/* ==UserStyle==
+@name           Dark theme for pkgs.alpinelinux.org 
+@namespace      https://github.com/panekj/usercss.styles
+@version        1.0.0
+@description    Dark theme for Alpine Linux packages website
+@author         panekj <panekj@pm.me> (https://github.com/panekj)
+@homepageURL    https://github.com/panekj/usercss.styles/
+@supportURL     https://github.com/panekj/usercss.styles/issues
+@updateURL      https://github.com/panekj/usercss.styles/raw/master/pkgs.alpinelinux.org.user.css
+@license        AGPL-3.0 (https://www.gnu.org/licenses/agpl-3.0.en.html)
+==/UserStyle== */
+
+@-moz-document domain("pkgs.alpinelinux.org") {
+	body {
+		background: #333;
+		color: #d0d0d1
+	}
+	
+	.pure-table-odd td,
+	.pure-table-striped tr:nth-child(2n-1) td {
+		background: #222
+	}
+	
+	.pure-table thead,
+	.grid-head {
+		background: #111;
+		color: #ddd
+	}
+	
+	.grid-body,
+	.pure-table,
+	.pure-table td,
+	.pure-table th,
+	main#package .multi-fields ul,
+	main#package .multi-fields details summary {
+		border: 1px solid #111
+	}
+	
+	.pure-form-stacked input,
+	.pure-form-stacked label,
+	.pure-form-stacked select,
+	.pure-form-stacked textarea {
+		background: #222
+	}
+	
+	.pure-form input[type=password],
+	.pure-form input[type=email],
+	.pure-form input[type=url],
+	.pure-form input[type=date],
+	.pure-form input[type=month],
+	.pure-form input[type=time],
+	.pure-form input[type=datetime],
+	.pure-form input[type=datetime-local],
+	.pure-form input[type=week],
+	.pure-form input[type=tel],
+	.pure-form input[type=color],
+	.pure-form input[type=number],
+	.pure-form input[type=search],
+	.pure-form input[type=text],
+	.pure-form select,
+	.pure-form textarea {
+		border: 1px solid #333;
+		box-shadow: inset 0 1px 3px #111
+	}
+	
+	.pure-button-primary,
+	.pure-button-selected,
+	a.pure-button-primary,
+	a.pure-button-selected {
+		background-color: #10597D;
+		color: #eee
+	}
+	
+	main#package .flag-button a {
+		background: #742222;
+		color: #eee
+	}
+	
+	th.header,
+	main#package .multi-fields details summary {
+		background: #222;
+		color: #d0d0d1
+	}
+	
+	main#package .multi-fields ul > li:nth-of-type(odd) {
+		background: #252525
+	}
+	
+	.pure-menu-active>.pure-menu-link,
+	.pure-menu-link:focus,
+	.pure-menu-link:hover {
+		background: #151515;
+		color: #d0d0d1
+	}
+}
